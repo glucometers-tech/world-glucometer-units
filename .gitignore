@@ -6,5 +6,6 @@
 venv/
 __pycache__/
 
-# default output of the tool
+# default outputs of the tool
+index.html
 worldmap.svg
