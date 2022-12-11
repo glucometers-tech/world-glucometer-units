@@ -21,6 +21,7 @@ UNIT_TO_COUNTRIES = {
         "cn": None,
         "gb": "https://www.nhs.uk/conditions/high-blood-sugar-hyperglycaemia/",
         "ie": "https://www2.hse.ie/conditions/type-2-diabetes/treatment/medicine/",
+        "no": "https://www.diabetes.no/diabetes-type-1/behandling/blodsukker/",
     },
     "both": {
         "pl": None,
