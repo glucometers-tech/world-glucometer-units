@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: 2022 Diego Elio Pettenò
+#
+# SPDX-License-Identifier: 0BSD
+
+click
+pygal_maps_world
