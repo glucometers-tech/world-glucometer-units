@@ -44,7 +44,10 @@ def render_pages(output_directory: pathlib.Path) -> None:
 
     rendered_markdown = template.render(countries_to_unit=countries_to_unit)
     (output_directory / "index.html").write_text(
-        cmarkgfm.github_flavored_markdown_to_html(rendered_markdown)
+        cmarkgfm.github_flavored_markdown_to_html(
+            rendered_markdown, options=cmarkgfm.cmark.Options.CMARK_OPT_UNSAFE
+        ),
+        encoding="utf-8",
     )
 
 

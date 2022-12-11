@@ -3,7 +3,6 @@ SPDX-FileCopyrightText: 2022 Diego Elio Pettenò
 
 SPDX-License-Identifier: 0BSD
 -->
-
 # Blood Sugar Level Units Worldwide
 
 Blood sugar level (also known as glycaemia) is the measure of glucose concentrated in the blood.
