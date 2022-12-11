@@ -4,3 +4,7 @@
 
 *~
 venv/
+__pycache__/
+
+# default output of the tool
+worldmap.svg
