@@ -21,3 +21,15 @@ clear to know which country uses what, until now!
 {%- for (country, (unit, reference)) in countries_to_unit.items() %}
 | {{country}} | {% if reference == None %}{{unit}}{% else %}[{{unit}}]({{reference}}){% endif %} |
 {%- endfor %}
+
+## Contributing
+
+If you want to include a new country, please [check the GitHub repository](
+https://github.com/glucometers-tech/world-glucometer-units)!
+
+Currently both units and references are hardcoded in the Python source code, but
+improvements are welcome.
+
+If there is any way to migrate the references into [Wikidata](https://www.wikidata.org/)
+and render this page from it, it would be very welcome, as it would provide a lot more
+useful.
