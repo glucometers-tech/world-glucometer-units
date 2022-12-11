@@ -12,14 +12,18 @@ from pygal.maps import world
 
 UNIT_TO_COUNTRIES = {
     "mg/dL": {
+        "de": None,
         "it": "https://www.salute.gov.it/portale/nutrizione/dettaglioContenutiNutrizione.jsp?lingua=italiano&id=5511&area=nutrizione&menu=croniche&tab=4",
         "us": None,
     },
     "mmol/L": {
+        "cn": None,
         "gb": "https://www.nhs.uk/conditions/high-blood-sugar-hyperglycaemia/",
         "ie": "https://www2.hse.ie/conditions/type-2-diabetes/treatment/medicine/",
-        "cn": None,
     },
+    "both": {
+        "pl": None,
+    }
 }
 
 
