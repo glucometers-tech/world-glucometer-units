@@ -6,6 +6,7 @@ import pathlib
 
 import click
 import cmarkgfm
+import pycountry
 import jinja2
 from pygal.maps import world
 
@@ -39,8 +40,9 @@ def render_pages(output_directory: pathlib.Path) -> None:
 
     countries_to_unit = {}
     for unit, countries in UNIT_TO_COUNTRIES.items():
-        for (country, reference) in countries.items():
-            countries_to_unit[country] = (unit, reference)
+        for (country_code, reference) in countries.items():
+            country = pycountry.countries.lookup(country_code)
+            countries_to_unit[country.name] = (unit, reference)
 
     rendered_markdown = template.render(countries_to_unit=countries_to_unit)
     (output_directory / "index.html").write_text(

@@ -5,4 +5,5 @@
 click
 cmarkgfm
 jinja2
+pycountry
 pygal_maps_world
