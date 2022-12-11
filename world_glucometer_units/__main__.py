@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: 0BSD
 
 import pathlib
+import textwrap
 
 import click
 import cmarkgfm
@@ -23,7 +24,7 @@ UNIT_TO_COUNTRIES = {
     },
     "both": {
         "pl": None,
-    }
+    },
 }
 
 
@@ -34,6 +35,19 @@ def render_worldmap(output_file: pathlib.Path) -> None:
         worldmap.add(unit, countries.keys())
 
     worldmap.render_to_file(output_file)
+
+
+HTML_PREAMBLE = textwrap.dedent(
+    """\
+    <link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
+    """
+)
+
+
+def render_markdown(output_path: pathlib.Path, content: str) -> None:
+    output_path.write_text(HTML_PREAMBLE + content, encoding="utf-8")
 
 
 def render_pages(output_directory: pathlib.Path) -> None:
@@ -49,11 +63,11 @@ def render_pages(output_directory: pathlib.Path) -> None:
             countries_to_unit[country.name] = (unit, reference)
 
     rendered_markdown = template.render(countries_to_unit=countries_to_unit)
-    (output_directory / "index.html").write_text(
+    render_markdown(
+        output_directory / "index.html",
         cmarkgfm.github_flavored_markdown_to_html(
             rendered_markdown, options=cmarkgfm.cmark.Options.CMARK_OPT_UNSAFE
         ),
-        encoding="utf-8",
     )
 
 
