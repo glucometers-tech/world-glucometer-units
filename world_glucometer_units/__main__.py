@@ -14,9 +14,9 @@ from pygal.maps import world
 UNIT_TO_COUNTRIES = {
     "mg/dL": {
         "de": None,
+        "es": "https://www.sanidad.gob.es/ciudadanos/enfLesiones/enfNoTransmisibles/diabetes/diabetes.htm",
         "it": "https://www.salute.gov.it/portale/nutrizione/dettaglioContenutiNutrizione.jsp?lingua=italiano&id=5511&area=nutrizione&menu=croniche&tab=4",
         "us": None,
-        "es": "https://www.sanidad.gob.es/ciudadanos/enfLesiones/enfNoTransmisibles/diabetes/diabetes.htm",
     },
     "mmol/L": {
         "cn": None,
