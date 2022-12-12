@@ -25,6 +25,7 @@ UNIT_TO_COUNTRIES = {
         "no": "https://www.diabetes.no/diabetes-type-1/behandling/blodsukker/",
     },
     "both": {
+        "ph": None,
         "pl": None,
     },
 }
