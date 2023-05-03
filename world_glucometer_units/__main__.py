@@ -17,6 +17,7 @@ UNIT_TO_COUNTRIES = {
         "es": "https://www.sanidad.gob.es/ciudadanos/enfLesiones/enfNoTransmisibles/diabetes/diabetes.htm",
         "it": "https://www.salute.gov.it/portale/nutrizione/dettaglioContenutiNutrizione.jsp?lingua=italiano&id=5511&area=nutrizione&menu=croniche&tab=4",
         "us": None,
+        "br": "https://bvsms.saude.gov.br/bvs/publicacoes/diabetes_mellitus_cab16.pdf"
     },
     "mmol/L": {
         "cn": None,
